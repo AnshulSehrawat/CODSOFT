@@ -285,3 +285,11 @@ body {
     background-attachment: scroll;
   }
 }
+
+.copyright
+{
+  padding : 5vh 0;
+  background-color: 2c3237;
+  color : grey;
+  text-align: center;
+}
