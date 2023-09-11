@@ -245,6 +245,13 @@ body {
   .hi {
     margin-top: 15%;
   }
+  .gallery-img
+  {
+    width: 40vw;
+    height: auto;
+    align-self: stretch;
+    object-fit: cover;
+  }
 }
 
 
