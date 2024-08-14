@@ -1,14 +1,20 @@
-body {
+html,body {
   padding: 0;
   margin: 0;
   border: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .top-section {
-  background-color: #2c3237;
+  background-color: #212121;
   padding: 3% 15% 7%;
   margin: 0;
+  width: 100vw;
+}
+
+.top-section-container
+{
+  width: 100vw;
 }
 
 /*--------- navigation-bar------------- */
@@ -52,7 +58,7 @@ body {
 .heading {
   animation: appear 2s 0.5s ease-in-out 1;
   animation-fill-mode: forwards;
-  color: #2c3237;
+  color: #212121;
   display: inline-block;
   font-size: 4rem;
   margin: 0 4% 0;
@@ -61,7 +67,7 @@ body {
 .sub-heading {
   animation: appear-sub 3s 0.5s ease-in-out 1;
   animation-fill-mode: forwards;
-  color: #2C3237;
+  color: #212121;
   display: inline-block;
   font-size: 2rem;
   margin: 0 4% 0;
@@ -69,7 +75,7 @@ body {
 
 @keyframes appear {
   from {
-    color: #2c3237;
+    color: #212121;
   }
 
   to {
@@ -79,7 +85,7 @@ body {
 
 @keyframes appear-sub {
   from {
-    color: #2c3237;
+    color: #212121;
   }
 
   to {
@@ -88,11 +94,25 @@ body {
 }
 
 /*----------- character-design-video----------- */
+.character-design-video-container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.charcter-design-tag
+{
+  color :#C0C0C0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 0;
+  margin-right: 2%;
+  opacity: 0.2;
+}
 .character-design-video {
   height: 30vmax;
-  margin-top: 5%;
-  margin-right: 6.36%;
-  margin-left: 35.75%;
+  margin-right : 9%;
 }
 
 /* -----------parallax--------------- */
@@ -109,7 +129,7 @@ body {
 
 .war-or-peace
 {
-  color : grey;
+  color : #212121d8;
   background-color: white;
   font-size: 2vw;
   padding: 2% 0;
@@ -119,8 +139,13 @@ body {
   padding: 3%;
   padding-left: 8rem;
   padding-right: 8rem;
+  background-color: #212121;
 }
 
+#About
+{
+  width: 100vw;
+}
 .about-img {
   width: 60%;
   border-radius: 10%;
@@ -159,14 +184,47 @@ body {
 /* -----------Work-Section--------- */
 #Work
 {
-  width: 100%;
-  padding: 3%;
+  width: 100vw;
+  position: relative;
+}
 
+.grey-bg
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.glass
+{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(90px);
+    mix-blend-mode:darken;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.glass::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://img.freepik.com/free-photo/noisy-background_1194-7547.jpg?w=740&t=st=1723480759~exp=1723481359~hmac=ae8fa84d5e5654ed52de586618fd3476a58b0c974b1f39a4af0d183538763781") repeat;
+    opacity: 0.15; 
+    pointer-events: none; 
 }
 
 .work-sec {
   width: 100%;
-  padding: 1% 2%;
+  padding: 3% 4%;
   display : flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -178,7 +236,8 @@ body {
 .gallery-img
 {
   height: 30vh;
-  border: 0.5rem solid #2c3237;
+  border: 0.1rem solid white;
+  padding: 0.7%;
 }
 
 
@@ -186,7 +245,8 @@ body {
 .contact-sec {
   height: 6vmax;
   width: 100vw;
-  background-color: #2c3237;
+  background: rgb(184,184,184);
+background: linear-gradient(180deg, rgba(184,184,184,0.20220588235294112) 0%, rgba(119,119,119,1) 8%, rgba(99,99,99,1) 17%, rgba(56,56,56,1) 17%, rgba(59,59,59,1) 27%, rgba(33,33,33,1) 35%, rgba(108,108,108,1) 35%, rgba(33,33,33,1) 40%, rgba(33,33,33,1) 44%, rgba(33,33,33,1) 47%, rgba(33,33,33,1) 52%, rgba(33,33,33,1) 53%, rgba(33,33,33,1) 57%, rgba(33,33,33,1) 70%, rgba(33,33,33,1) 77%);
   padding: 6vmax;
   text-align: center;
 }
@@ -263,8 +323,9 @@ body {
 
 .copyright
 {
-  padding : 1vh 0;
-  background-color: 2c3237;
-  color : grey;
+  padding : 0 0 3vh;
+  width: 100vw;
+  background-color: #212121;
+  color : #C0C0C0;
   text-align: center;
 }
