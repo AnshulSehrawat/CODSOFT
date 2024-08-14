@@ -113,6 +113,7 @@ html,body {
 .character-design-video {
   height: 30vmax;
   margin-right : 9%;
+  background: transparent;
 }
 
 /* -----------parallax--------------- */
